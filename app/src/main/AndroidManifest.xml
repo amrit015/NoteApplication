@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.notesapplication">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.READ_LOGS"></uses-permission>
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".SignInActivity"
+            android:screenOrientation="portrait">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".MainActivity"
+            android:allowBackup="true"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="orientation|keyboardHidden|screenSize|layoutDirection"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
+        <service android:name=".Utils.OnAlarmReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </service>
+
+        <!-- Will not be called unless the application explicitly enables it -->
+        <receiver
+            android:name=".Utils.DeviceBootReceiver"
+            android:enabled="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".NotesAddActivity"
+            android:configChanges="orientation|screenSize"
+            android:parentActivityName="com.example.notesapplication.MainActivity"
+            android:windowSoftInputMode="stateAlwaysVisible">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.notesapplication.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".DevelopersActivity"
+            android:configChanges="orientation|screenSize"
+            android:parentActivityName="com.example.notesapplication.MainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.notesapplication.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".RegisterActivity"
+            android:parentActivityName="com.example.notesapplication.SignInActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.notesapplication.MainActivity" />
+        </activity>
+    </application>
+
+</manifest>

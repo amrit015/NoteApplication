@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="material_palette" type="color">#00695c</item>
+    <item name="material_palette_dark" type="color">#004d40</item>
+    <item name="material_palette_light" type="color">#00796b</item>
+    <item name="material_palette_lighter" type="color">#b100796b</item>
+    <item name="clicked_listView" type="color">#9db6b3ba</item>
+    <item name="tab_indicator" type="color">#ffb05d5d</item>
+    <item name="tab_underline" type="color">#ff000000</item>
+    <item name="white" type="color">#FFFFFF</item>
+    <item name="light" type="color">#ffe0e0e0</item>
+    <item name="lighter" type="color">#eae8e8</item>
+    <item name="tab_inactive_color" type="color">#6c252525</item>
+    <item name="black" type="color">#000000</item>
+    <item name="underline_view" type="color">#4ebbbbbb</item>
+    <item name="black_light" type="color">#e4333333</item>
+    <item name="black_lighter" type="color">#e4606060</item>
+    <item name="main_red" type="color">#ffa60000</item>
+    <item name="logo_colour" type="color">#27cae3</item>
+    <item name="logo_colour_dark" type="color">#1f6891</item>
+    <item name="main_red_light" type="color">#bebc0101</item>
+    <color name="colorPrimary">#388fd4</color>
+    <color name="colorPrimaryDark">#3762a4</color>
+    <color name="colorAccent">#959696</color>
+    <color name="color_unpressed">#0a81df</color>
+    <color name="color_pressed">#1b6ba4</color>
+    <color name="redunclick">#ff4747</color>
+    <color name="redclick">#fa6d6d</color>
+    <color name="callclick">#ca1f1f</color>
+    <color name="callunclick">#fd5a45</color>
+</resources>
